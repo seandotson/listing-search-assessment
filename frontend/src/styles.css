@@ -1,0 +1,253 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #213b34;
+  background: #f5f6f2;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 1260px;
+  margin: auto;
+  padding: 48px 32px 24px;
+}
+.heading {
+  border-bottom: 1px solid #dce2d9;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #56765a;
+}
+h1,
+h2,
+h3 {
+  font-family: inherit;
+}
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  letter-spacing: -0.05em;
+  margin: 12px 0;
+}
+.heading p {
+  color: #69766f;
+  margin: 0;
+}
+h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+h3 {
+  font-size: 17px;
+  margin: 10px 0 4px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.panel {
+  background: white;
+  padding: 24px;
+  border: 1px solid #dce2d9;
+  border-radius: 14px;
+}
+.muted,
+small {
+  color: #66776c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+form {
+  display: grid;
+  gap: 17px;
+  margin-top: 24px;
+}
+label {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+input,
+select {
+  min-width: 0;
+  width: 100%;
+  padding: 11px 10px;
+  border: 1px solid #cdd8ce;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+  color: #213b34;
+}
+input::placeholder {
+  color: #7c867f;
+}
+:focus-visible {
+  outline: 3px solid #88ae8b;
+  outline-offset: 3px;
+}
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #214a3b;
+  border-radius: 6px;
+  background: #214a3b;
+  color: white;
+  padding: 11px 16px;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(0.94);
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.secondary {
+  background: white;
+  color: #214a3b;
+  border-color: #cdd8ce;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.actions button:first-child {
+  flex: 1;
+}
+.results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.results-heading span {
+  font-size: 12px;
+  color: #66776c;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.card {
+  border: 1px solid #dce2d9;
+  border-radius: 12px;
+  padding: 23px;
+  background: #fff;
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.status {
+  text-transform: capitalize;
+  background: #edf3e8;
+  color: #41603c;
+  padding: 4px 9px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.score {
+  font-size: 14px;
+  font-weight: 700;
+}
+.score span {
+  font-size: 10px;
+  font-weight: 400;
+  color: #66776c;
+}
+.price {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-top: 22px;
+}
+.location {
+  color: #66776c;
+  font-size: 13px;
+  margin: 0;
+}
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0 16px;
+  font-size: 12px;
+}
+.description {
+  font-size: 13px;
+  color: #66776c;
+  line-height: 1.6;
+  min-height: 42px;
+}
+.card footer {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #edf0e9;
+  font-size: 10px;
+  color: #6c786e;
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  gap: 10px;
+  font-size: 12px;
+}
+.empty {
+  padding: 48px 24px;
+  border: 1px dashed #cdd8ce;
+  border-radius: 12px;
+  background: white;
+  text-align: center;
+}
+.error {
+  color: #a03525;
+  font-size: 13px;
+}
+.page-footer {
+  padding-top: 32px;
+  font-size: 11px;
+  color: #66776c;
+  line-height: 1.6;
+}
+@media (max-width: 950px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  main {
+    padding: 28px 18px;
+  }
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .heading {
+    margin-bottom: 24px;
+  }
+  .results-heading {
+    flex-wrap: wrap;
+  }
+}
